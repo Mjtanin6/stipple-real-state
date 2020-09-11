@@ -1,0 +1,365 @@
+
+
+@media only screen and (min-width: 992px) {
+	.how-it-works {
+		.work-process {
+			.how-it-card {
+			    min-height: 289px !important;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 575px) {
+	.how-it-works {
+		.work-process {
+			.how-it-card {
+			    min-height: 184px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1199px) {
+
+	.header {
+
+		.navbar {
+
+			.navbar-collapse {
+				display: none !important;
+
+				// &.show {
+				// 	display: block !important; 
+				// }
+			}
+
+			.navbar-toggler {
+				background-color: #fff;
+			    border: 0;
+			    border-radius: 0;
+			    padding: 3px 7px;
+			    display: block;
+			}
+
+			.buttons-wrapper {
+				display: none;
+			}
+		}
+	}
+
+	.mobile-menu {
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    width: 360px;
+	    background: #fff;
+	    transition: all .3s ease;
+	    display: block;
+	    padding: 65px 30px;
+	    opacity: 0;
+	    visibility: hidden;
+	    z-index: 1024;
+
+	    &.show {
+	    	opacity: 1;
+	    	visibility: visible;
+	    }
+
+	    .navbar-nav {
+
+			li {
+
+				a {
+					color: #000;
+					padding: 10px 20px;
+					font-family: $lato;
+					@include em(14px, 80, 25px);
+					font-weight: 900;
+					text-transform: uppercase;
+					transition: all .3s ease;
+					border-bottom: 1px solid #ddd;
+				}
+
+				&.active, &:hover, :focus, &:active:focus {
+
+					a {
+						color: #DB403A;
+					}
+				}
+			}
+		}
+	}
+
+	.tab-wrapper {
+
+		.tab-container {
+
+			.nav {
+
+				&.nav-tabs {
+
+					a {
+						padding: 20px 30px;
+
+						&:after {
+							width: 100%;
+							height: 5px;
+							top: 100%;
+							left: 0;
+						}
+					}
+				}
+			}
+
+			.tab-content {
+			    padding: 35px;
+			}
+		}
+	}
+
+	.footer {
+		.company {
+			margin-left: 0 !important;
+
+			h2 {
+				
+			}
+			ul {
+				li {
+					a {
+						font-size: 0.9375rem!important;
+					}
+				}
+			}
+
+		}
+		.legal {
+			margin-left: 0 !important;
+
+			h2 {
+				
+			}
+			ul {
+				li {
+					a {
+						font-size: 0.9375rem!important;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+
+	h2 {
+		@include em(30px, 80, 40px);
+	}
+	.services {
+		.row.include-go-to {
+		    margin-bottom: 100px;
+		}
+	}
+	.services {
+
+		.row {
+
+			.media {
+
+				.go-to {
+					max-width: 300px;
+				    left: calc(50% - 150px);
+				    padding: 20px;
+				    bottom: -123px;
+
+					form input[type="text"] {
+					    margin-top: 20px;
+					    margin-bottom: 20px;
+					    min-height: 50px
+					}
+
+					form input[type="text"] {
+					    margin-top: 20px;
+					    margin-bottom: 20px;
+					    min-height: 50px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	/*****************************************************************************
+	*									LEGAL PAGE
+	*****************************************************************************/ 
+	.tab-wrapper {
+
+		.tab-container {
+			display: flex;
+			flex-wrap: wrap;
+
+			.nav {
+				width: 25%;
+			}
+
+			.tab-content {
+				width: 75%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	h2 {
+		@include em(26px, 80, 36px);
+	}
+
+	.services {
+
+		.row {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+	} 
+
+	.how-it-works {
+
+		.work-process {
+
+			.how-it-card {
+		    	padding: 50px 40px;
+			}
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+
+	.services {
+
+		.row {
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+		}
+
+		.content {
+			max-width: 100%;
+
+			.btn {
+				margin: 0 0 30px;
+			}
+		}
+	}
+
+	.how-it-works {
+
+		.work-process {
+
+			.how-it-card {
+		    	padding: 30px;
+			}
+		}
+	}
+
+	.section-title {
+		margin-bottom: 30px;
+	}
+
+	.tab-wrapper {
+
+		.tab-container {
+
+			.nav.nav-tabs {
+
+				a {
+				    padding: 12px;
+				}
+			}
+			
+			.tab-content {
+			    padding: 25px;
+			}
+		}
+	}
+	.sell-your-home {
+		.section-wrapper {
+			p {
+				@include em(15px, 80, 25px);
+			}
+			ul {
+				li {
+				    @include em(15px, 80, 25px);
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+	.col {
+		width: 100%;
+		flex-basis: inherit;
+	}
+
+	.how-it-works {
+
+		.work-process {
+
+			.how-it-card {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.find-a-home {
+
+		.buttons-wrapper {
+			a {
+				&.btn {
+			        padding: 10px 35px !important;
+				}
+			}
+		}
+	}
+	.ready-to-find {
+		margin-top: 100px;
+		margin-bottom: 80px;
+
+		.section-wrapper {
+
+			h2 {
+				@include em(30px, 80, 42px);
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.services {
+	    padding: 15px 0;
+	}
+	.find-a-home {
+		.buttons-wrapper {
+			display: inline-block;
+			a {
+				&.btn {
+			        padding: 10px 35px !important;
+				}
+				&:last-child {
+					margin-left: 0px !important;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 380px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}
+

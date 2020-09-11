@@ -1,0 +1,590 @@
+/* =========== Import Mixin =============*/
+@import "mixin";
+$lato: 'Lato', sans-serif;
+$primary: #DB403A;
+
+body, h1, h2, h3, h4, h5, h6, a, html, section, div, button, span, input, input::-webkit-input-placeholder {
+	font-family: $lato;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+h2 {
+	@include em(36px, 80, 45px);
+	font-weight: 300;
+	color: #000000;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+}
+
+body {
+	@include em(15px, 80, 20px);
+	font-weight: 400;
+	color: #000000;
+}
+
+.btn {
+	color: #fff;
+	font-family: $lato;
+	@include em(16px, 80, 25px );
+	font-weight: 900;
+	background: #000;
+	border-radius: 500px;	
+	text-transform: uppercase;
+	transition: all 0.5s ease;
+    border: 1 solid transparent;
+    display: block;
+    max-width: 215px;
+    padding: 17px;
+
+	&:hover, &:focus, &:active:focus {
+		color: #000;
+		background: transparent;
+		outline: 0;
+		border-color: #000;
+        box-shadow: none;
+        outline-offset: 0;
+	}
+}
+
+button, a {
+
+	&:hover, &:focus, &:active:focus {
+		color: #000;
+		background: transparent;
+		outline: 0;
+		border-color: #000;
+        box-shadow: none;
+        outline-offset: 0;
+	}
+}
+
+.align-center {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+.container {
+	max-width: 1550px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.section-title {
+	margin-bottom: 50px;
+}
+
+/*****************************************************************************
+*									HEADER CSS
+*****************************************************************************/ 
+
+.header {
+	@include coverbg();
+	background: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1024;
+
+	.banner-content {
+		min-height: 540px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		h1 {
+			color: #fff;
+			@include oem(50px, 50px );
+			font-family: 'Lato', sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}		
+
+	.navbar {
+		transition: all .3s ease;
+		padding: 18px 15px;
+		justify-content: space-between !important;
+		background: #000;
+
+		.logo {
+			display: block;
+
+			img {
+				transition: all 0.3s ease;
+				width: 100%;
+			}
+		}
+
+		.navbar-collapse {
+			flex-grow: inherit;;
+
+			.navbar-nav {
+
+				li {
+
+					a {
+						color: #fff;
+						padding: 10px 20px;
+						font-family: $lato;
+						@include em(14px, 80, 25px);
+						font-weight: 900;
+						text-transform: uppercase;
+						transition: all .3s ease;
+					}
+
+					&.active, &:hover, :focus, &:active:focus {
+
+						a {
+							color: #DB403A;
+						}
+					}
+				}
+			}
+		}
+
+		.buttons-wrapper {
+
+			a {
+				background: #464646;
+				text-transform: inherit;
+				padding: 17px 40px;
+				@include em(14px, 80, 25px);
+				border: 0;
+
+				&:last-child {
+					background: #fff;
+					color: #000;
+					margin-left: 12px;
+				}
+
+				&:hover, &:focus, &:active:focus {
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	&.include-banner {
+		background: transparent;
+		position: inherit;
+
+		.navbar {
+			background: transparent;
+		}
+	}
+
+	&.sticky {
+
+		.navbar  {
+			background: #000;
+			padding-bottom: 5px;
+			padding-top: 5px;
+
+			.logo {
+
+				img {
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+.mobile-menu {
+	display: none;
+}
+
+
+/*****************************************************************************
+*									SERVICES CSS
+*****************************************************************************/
+.services {
+	padding: 30px 0;
+
+	.row {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.content {
+		max-width: 502px;
+		margin: 0 auto;
+
+		.btn {
+			margin-top: 38px;
+		}
+	}
+
+	.media {
+
+		img {
+			border-radius: 30px;
+		}
+	}
+}
+
+
+/*****************************************************************************
+*									FIND A HOME . CSS
+*****************************************************************************/
+.find-a-home {
+	margin-top: 50px;
+	margin-bottom: 65px;
+
+	.row {
+
+		.buttons-wrapper {
+			justify-content: center;
+			margin-top: 25px;
+
+			h2 {}
+
+			a {
+				&.btn {
+				max-width: 242px;
+				padding: 16.5px 58px;
+
+				}
+				&:last-child {
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	background-image: url(../images/patran-bg.jpg);
+	background-size: cover;
+	padding: 40px 0px 60px;
+	.row {
+		.footer-logo {
+			.img {}
+		}
+
+		.company,
+		.legal {
+			margin-left: 50px;
+			h2 {
+				color: #fff;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+				li {
+					a {
+						color: #fff;
+						@include oem(20px, 38px);
+						font-weight: 300;
+						text-decoration: none;
+
+					}
+				}
+			}
+		}
+	}
+}
+
+/*****************************************************************************
+*									Rent page
+*****************************************************************************/ 
+
+.services {
+
+	.row {
+
+		&.include-go-to {
+			margin-bottom: 200px;
+		}
+
+		.media {
+			position: relative;
+
+			.go-to {
+				position: absolute;
+			    bottom: -180px;
+			    left: calc(50% - 250px);
+			    text-align: center;
+			    background: #fff;
+			    border: 1px solid #707070;
+			    padding: 40px 33px;
+			    max-width: 504px;
+			    z-index: 1000;
+
+				h4 {
+					@include em(25px, 80, 28px);
+					font-weight: 900;
+				}
+
+				form {
+					input[type="text"],
+					input[type="date"] {
+						margin-top: 45px;
+						margin-bottom: 45px;
+					    min-height: 81px;
+					    border-radius: 5px;
+					    width: 100%;
+					}
+					.btn {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+.how-it-works {
+
+	.section-title {
+		p {
+		    max-width: 618px;
+		    margin: 0 auto;
+		}
+	}
+
+	.work-process {
+
+		.how-it-card {
+			background: #464646;
+			border-radius: 30px;
+			padding: 90px 40px;
+			margin-bottom: 30px;
+
+			h2 {
+				color: #fff;
+				text-transform: uppercase;
+			}
+
+			p {
+				color: #fff;
+				max-width: 490px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.ready-to-find {
+	margin-top: 100px;
+	margin-bottom: 80px;
+
+	.row {
+
+		.section-wrapper {
+
+			h2 {
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+
+			p {
+				margin-bottom: 50px;
+			}
+
+			.btn {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.footer-v2 {
+	background-image: url(../images/patran-bg.jpg);
+	@include coverbg();
+	padding: 75px 0px 100px;
+
+		.section-wrapper {
+
+			h2 {
+				margin-bottom: 20px;
+				text-transform: uppercase;
+				color: #fff;
+			}
+
+			p {
+				margin-bottom: 50px;
+				color: #fff;
+			}
+
+			.btn {
+				margin: 0 auto;
+				background: #fff;
+				color: #000;
+				border: 1px solid #fff;
+
+				&:hover {
+					background: transparent;
+					color: #fff;
+
+				}
+			}
+		}
+
+}
+
+
+
+
+/*****************************************************************************
+*									LEGAL PAGE
+*****************************************************************************/ 
+.tab-wrapper {
+	margin-bottom: 60px;
+
+	.tab-container {
+
+		.nav {
+			border-radius: 0;
+			border: 0;
+			display: block;
+
+			&.nav-tabs {
+
+				a {
+					border-radius: 0;
+					color: #525252;
+					font-weight: 400;
+					padding: 28px 30px;
+					@include em(18px, 0, 24px);
+					border: .5px solid #C9C9C9;
+					position: relative;
+					border-right: 0;
+					text-align: center;
+
+					&:after {
+						position: absolute;
+						content: "";
+						width: 10px;
+						height: 100%;
+						background: #00D8FF;
+						right: -0.5px;
+						top: 0;
+						z-index: 1;
+						opacity: 0;
+						transition: all .3s ease;
+					}
+
+					&.active, &:hover, &:focus {
+						font-weight: 900;
+
+						&:after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+
+		.tab-content {
+			padding: 60px;
+			border: 1px solid #C9C9C9;
+
+			.tab-pane {
+
+				h1 {
+					@include em(44px, 0, 27px);
+					text-transform: uppercase;
+					font-weight: 900;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+
+/*****************************************************************************
+*									Sell page
+*****************************************************************************/ 
+.how-it-works {
+	.section-title {
+		h2 {
+			max-width: 875px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.sell-your-home {
+	margin: 100px 0;
+
+	.section-wrapper {
+		max-width: 688px;
+		margin: 0 auto;
+
+		p {
+			margin-bottom: 0;
+			@include em(22px, 80, 30px);
+		}
+		ul {
+			list-style: none;
+			padding-left: 0;
+
+
+			li {
+				@include em(22px, 80, 30px);
+
+			}
+		}
+	}
+}
+
+
+/*****************************************************************************
+*									CONTACT PAGE
+*****************************************************************************/ 
+.contact-form {
+	margin-top: 100px;
+
+	.form-title {
+
+		h1 {
+			@include em(44px, 0, 27px);
+			font-weight: 900;
+			margin-bottom: 20px;
+		}
+
+		p {
+			@include em(20px, 0, 32px);
+			font-weight: 300;
+		}
+	}
+	form {
+		input[type='text'],
+		input[type='email'],
+		input[type='number'],
+		select {
+			width: 49.5%;
+			height: 48px;
+			border: 1px solid #707070;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+
+		textarea {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		a {
+			margin: 0 auto;
+		}
+	}
+}
+
+/*****************************************************************************
+*									RESPONSIVE
+*****************************************************************************/ 
+@import "responsive";
